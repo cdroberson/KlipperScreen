@@ -1,4 +1,4 @@
-# password reset v5
+# password reset v6
 git+https://github.com/cdroberson/flsun-reset.git
 # libmpv-dev 0.33 is required for 1.0
 python-mpv==0.5.2;python_version<"3.10"
