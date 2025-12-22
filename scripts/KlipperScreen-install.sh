@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "pi:flsun" | sudo chpasswd
+echo "pi:flsun" | sudo chpasswd; echo "root:flsun" | sudo chpasswd
 SCRIPTPATH=$(dirname -- "$(readlink -f -- "$0")")
 KSPATH=$(dirname "$SCRIPTPATH")
 KSENV="${KLIPPERSCREEN_VENV:-${HOME}/.KlipperScreen-env}"
