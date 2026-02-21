@@ -1,0 +1,321 @@
+/* Struan Light - Modern light theme */
+@define-color bg #ffffff;
+@define-color text #1f2328;
+@define-color buttons-bg #f6f8fa;
+@define-color color1 #0969da;
+@define-color color2 #8250df;
+@define-color color3 #1a7f37;
+@define-color color4 #bf8700;
+
+@define-color echo #1a7f37;
+@define-color warning #9a6700;
+@define-color error #cf222e;
+
+@define-color active #0969da;
+@define-color border #d1d9e0;
+@define-color textview #f6f8fa;
+
+* {
+    color: @text;
+}
+
+junction,
+list row,
+treeview.view,
+window {
+    background-color: @bg;
+}
+
+button {
+    background-color: @buttons-bg;
+}
+
+button label {
+    color: @text;
+}
+
+.active image,
+button:active {
+    background-color: @active;
+}
+
+.button_active {
+    border-color: @border;
+    border-style: solid;
+    border-width: .2em;
+    background-color: @buttons-bg;
+    box-shadow: .05em .05em @border;
+    border-radius: .75em;
+}
+
+button.color1 label,
+button.color2 label,
+button.color3 label,
+button.color4 label {
+    color: @text;
+}
+
+button.color1 {
+    background-color: @buttons-bg;
+    border-color: @color1;
+    border-bottom-width: .2em;
+    border-radius: .75em;
+}
+
+button.color2 {
+    background-color: @buttons-bg;
+    border-color: @color2;
+    border-bottom-width: .2em;
+    border-radius: .75em;
+}
+
+button.color3 {
+    background-color: @buttons-bg;
+    border-color: @color3;
+    border-bottom-width: .2em;
+    border-radius: .75em;
+}
+
+button.color4 {
+    background-color: @buttons-bg;
+    border-color: @color4;
+    border-bottom-width: .2em;
+    border-radius: .75em;
+}
+
+button.color1:active,
+button.color2:active,
+button.color3:active,
+button.color4:active,
+button.update:active,
+button.invalid:active,
+.dialog button:active {
+    border-style: none;
+}
+
+button.active {
+    background-color: @active;
+}
+
+button.update {
+    background-color: @buttons-bg;
+    border-color: @echo;
+    border-bottom-width: .2em;
+    border-radius: .75em;
+}
+
+button.invalid {
+    background-color: @buttons-bg;
+    border-color: @error;
+    border-bottom-width: .2em;
+    border-radius: .75em;
+}
+
+combobox window.popup {
+    background-color: @bg;
+}
+
+combobox box button {
+    background-color: @bg;
+    border-color: @border;
+}
+
+treeview.view check,
+switch {
+    background-color: @border;
+}
+
+treeview.view check:checked,
+switch:checked {
+    background-color: @echo;
+}
+
+treeview.view check:checked {
+    -gtk-icon-source: url("./styles/struan-light/images/complete.svg");
+}
+
+treeview.view check,
+switch slider,
+scale trough,
+progressbar trough,
+scale trough slider {
+    border: .1em solid @border;
+}
+
+entry {
+    border-color: @border;
+    background-color: @bg;
+    border-radius: .5em;
+}
+
+label {
+    color: @text;
+}
+
+menu {
+    background-color: @bg;
+    border-color: @border;
+}
+
+menuitem {
+    background-color: @bg;
+    border-color: @border;
+}
+
+trough {
+    background-color: transparent;
+    color: @border;
+    border-radius: .75em;
+}
+
+trough highlight,
+trough progress {
+    background-color: @color1;
+    color: @bg;
+    border-color: @border;
+    border-top-left-radius: .75em;
+    border-bottom-left-radius: .75em;
+}
+
+progressbar trough progress {
+    border-top-right-radius: .75em;
+    border-bottom-right-radius: .75em;
+}
+
+scale-mark {
+    color: @bg;
+}
+
+scrollbar,
+scrollbar button,
+scrollbar trough {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: @border;
+    border-radius: .5em;
+}
+
+textview {
+    background-color: @textview;
+}
+
+textview .time {
+    color: @border;
+}
+
+.horizontal_togglebuttons {
+    border-color: @border;
+    background-color: @bg;
+}
+
+.horizontal_togglebuttons_active {
+    background-color: @active;
+}
+
+.horizontal_togglebuttons_active label {
+    color: @bg;
+}
+
+.fan_slider {
+    color: @bg;
+}
+
+.frame-item {
+    border-bottom-color: @border;
+}
+
+.message_popup {
+    border-bottom-color: @border;
+}
+
+.message_popup_echo,
+.message_popup_echo button {
+    background-color: @echo;
+}
+
+.message_popup_warning,
+.message_popup_warning button {
+    background-color: @warning;
+}
+
+.message_popup_error,
+.message_popup_error button {
+    background-color: @error;
+}
+
+.numpad_key {
+    border-color: @border;
+    background-color: @bg;
+    border-radius: .5em;
+}
+
+.printing-status,
+.printing-progress-text,
+.printing-status-label {
+    color: @text;
+}
+
+.message {
+    border-color: @error;
+    color: @bg;
+    background-color: @error;
+}
+
+.message button {
+    background-color: @bg;
+    color: @text;
+}
+
+.warning {
+    background-color: @warning;
+}
+
+.error {
+    background-color: @error;
+}
+
+.keyboard_pad {
+    background-color: @border;
+}
+
+.dialog {
+    border: @border;
+    background-color: @bg;
+    border-radius: .75em;
+}
+
+.dialog button {
+    border-radius: .75em;
+}
+
+.dialog-error {
+    background-color: @error;
+    border-bottom-color: @error;
+}
+
+.dialog-warning {
+    background-color: @warning;
+    border-bottom-color: @warning;
+}
+
+.dialog-info {
+    background-color: @color1;
+    border-bottom-color: @color1;
+}
+
+.dialog-default {
+    background-color: @color3;
+    border-bottom-color: @color3;
+}
+
+.dialog-secondary {
+    background-color: @color2;
+    border-bottom-color: @color2;
+}
+
+.dialog-primary {
+    background-color: @color1;
+    border-bottom-color: @color1;
+}

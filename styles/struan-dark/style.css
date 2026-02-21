@@ -1,0 +1,259 @@
+/* Struan Dark - Modern dark theme */
+@define-color text #c9d1d9;
+@define-color bg #0d1117;
+@define-color buttons-bg #161b22;
+@define-color color1 #58a6ff;
+@define-color color2 #bc8cff;
+@define-color color3 #3fb950;
+@define-color color4 #d29922;
+
+@define-color echo #238636;
+@define-color warning #d29922;
+@define-color error #da3633;
+
+@define-color active #1f6feb;
+@define-color active-dark #21262d;
+@define-color lines #484f58;
+@define-color slider #58a6ff;
+
+* {
+    color: @text;
+}
+
+junction,
+list row,
+treeview.view,
+button,
+window {
+    background-color: @bg;
+}
+
+button.color1 {
+    background-color: @buttons-bg;
+    border-color: @color1;
+    border-radius: .75em;
+    border-bottom-width: .2em;
+}
+
+button.color2 {
+    background-color: @buttons-bg;
+    border-color: @color2;
+    border-radius: .75em;
+    border-bottom-width: .2em;
+}
+
+button.color3 {
+    background-color: @buttons-bg;
+    border-color: @color3;
+    border-radius: .75em;
+    border-bottom-width: .2em;
+}
+
+button.color4 {
+    background-color: @buttons-bg;
+    border-color: @color4;
+    border-radius: .75em;
+    border-bottom-width: .2em;
+}
+
+.button_active {
+    background-color: @active-dark;
+    border-width: .2em;
+    border-radius: .75em;
+}
+
+.active image,
+button.color1:active,
+button.color2:active,
+button.color3:active,
+button.color4:active,
+button.update:active,
+button.invalid:active,
+.dialog button:active {
+    border-style: none;
+}
+
+button.update,
+button.invalid {
+    background-color: @buttons-bg;
+    border: 0;
+    border-bottom: .2em solid;
+    border-radius: .75em;
+}
+
+button.update {
+    border-bottom-color: @echo;
+}
+
+button.invalid {
+    border-bottom-color: @error;
+}
+
+menu,
+menuitem,
+combobox button,
+combobox arrow,
+combobox menuitem {
+    background-color: @active-dark;
+    border-color: @bg;
+}
+
+treeview.view check,
+switch {
+    background-color: @active-dark;
+}
+
+treeview.view check:checked,
+switch:checked {
+    background-color: @echo;
+}
+
+treeview.view check:checked {
+    -gtk-icon-source: url("./styles/struan-dark/images/complete.svg");
+}
+
+entry {
+    background-color: @active-dark;
+    border-color: @lines;
+    border-radius: .5em;
+}
+
+label {
+    color: @text;
+}
+
+trough {
+    background-color: @active-dark;
+    color: @text;
+    border-radius: .5em;
+}
+
+trough highlight,
+trough progress {
+    background-color: @slider;
+    color: @text;
+    border-color: @bg;
+}
+
+scale-mark {
+    color: @text;
+}
+
+scrollbar,
+scrollbar button,
+scrollbar trough {
+    background-color: @bg;
+}
+
+scrollbar slider {
+    background-color: @active-dark;
+    border-radius: .5em;
+}
+
+textview .time {
+    color: @lines;
+}
+
+.dialog {
+    border: @bg;
+    background-color: @buttons-bg;
+    border-radius: .75em;
+}
+
+.dialog button {
+    background-color: @active-dark;
+    border-radius: .75em;
+}
+
+.horizontal_togglebuttons {
+    border-color: @bg;
+    background-color: @buttons-bg;
+}
+
+button:active,
+.horizontal_togglebuttons_active,
+button.active {
+    background-color: @active;
+}
+
+.fan_slider {
+    color: @text;
+}
+
+.message_popup {
+    border-bottom-color: @lines;
+}
+
+.message_popup_echo,
+.message_popup_echo button {
+    background-color: @echo;
+}
+
+.message_popup_warning,
+.message_popup_warning button {
+    background-color: @warning;
+}
+
+.message_popup_error,
+.message_popup_error button {
+    background-color: @error;
+}
+
+.numpad_key {
+    border-color: @bg;
+    background-color: @buttons-bg;
+    border-radius: .5em;
+}
+
+.printing-status,
+.printing-progress-text,
+.printing-status-label {
+    color: @text;
+}
+
+.message {
+    border-color: @error;
+    color: @text;
+    background-color: @error;
+}
+
+.message button {
+    background-color: @text;
+    color: @bg;
+}
+
+.warning {
+    background-color: @warning;
+}
+
+.error {
+    background-color: @error;
+}
+
+.keyboard_pad {
+    background-color: @buttons-bg;
+}
+
+.dialog-error {
+    border-bottom-color: @error;
+}
+
+.dialog-warning {
+    border-bottom-color: @warning;
+}
+
+.dialog-info {
+    border-bottom-color: @color1;
+}
+
+.dialog-default {
+    border-bottom-color: @color3;
+}
+
+.dialog-secondary {
+    border-bottom-color: @color2;
+}
+
+.dialog-primary {
+    border-bottom-color: @color1;
+}
