@@ -31,8 +31,14 @@ class Panel(ScreenPanel):
             return
 
         for fan in self.devices:
-            if fan in data and "speed" in data[fan]:
-                self.update_fan_speed(None, fan, self._printer.get_fan_speed(fan))
+            if fan in data:
+                if "speed" in data[fan]:
+                    self.update_fan_speed(None, fan, self._printer.get_fan_speed(fan))
+                if "rpm" in data[fan] and data[fan]["rpm"] is not None:
+                    self.devices[fan]["rpm_label"].set_label(f"{data[fan]['rpm']:.0f} RPM")
+                    self.devices[fan]["rpm_label"].show()
+                elif "rpm" in data[fan]:
+                    self.devices[fan]["rpm_label"].hide()
 
     def update_fan_speed(self, widget, fan, speed):
         if fan not in self.devices:
@@ -91,14 +97,19 @@ class Panel(ScreenPanel):
             scale = Gtk.ProgressBar(hexpand=True, show_text=True, fraction=speed)
             fan_col.pack_start(scale, True, True, 10)
 
+        rpm_label = Gtk.Label(halign=Gtk.Align.START, hexpand=True)
+        rpm_label.set_no_show_all(True)
+
         fan_row = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         fan_row.add(name)
+        fan_row.add(rpm_label)
         fan_row.add(fan_col)
 
         self.devices[fan] = {
             "changeable": changeable,
             "scale": scale,
             "speed": speed,
+            "rpm_label": rpm_label,
         }
 
         devices = sorted(self.devices)
